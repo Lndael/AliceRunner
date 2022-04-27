@@ -7,8 +7,7 @@ public class MovementComponent : MonoBehaviour
 {
     [SerializeField] private GameObject _player;
     [SerializeField] private Texture[] _texture;
-    
-    
+
     void Start()
     {
         
@@ -29,10 +28,10 @@ public class MovementComponent : MonoBehaviour
             _player.GetComponent<Renderer>().material.mainTexture = _texture[0];
         }
 
-        if (_player.transform.position.x > 8)
-            _player.transform.position = Vector3.right*8;
-        if (_player.transform.position.x < -8)
-            _player.transform.position = Vector3.left*8;
+        if (_player.transform.position.x > 2.5)
+            _player.transform.position = Vector3.right*2.5f + Vector3.up*4;
+        if (_player.transform.position.x < -2.5)
+            _player.transform.position = Vector3.left*2.5f + Vector3.up*4;
         
 
     }
